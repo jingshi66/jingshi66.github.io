@@ -1,0 +1,22 @@
+.paragraph {
+  color: goldenrod;
+}
+/* Combine multiple styles */
+    .paragraph {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 200px;
+    }
+    
+    #paragraph2 {
+  font-style: comic;
+}
+.paragraph2 {
+  color: rgb(69, 32, 218);
+}
+/* Combine multiple styles */
+    .paragraph2 {
+      font-weight: bold;
+      font-style: comic;
+      font-size: 100px;
+    }
