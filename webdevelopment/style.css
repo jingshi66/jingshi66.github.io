@@ -71,7 +71,96 @@ body {
 }
 
 .resume-link:hover {
-  background-color: #cce6ff;   /* Change background when hovered */
+  background-color: #e4ffcc;   /* Change background when hovered */
   border-color: #005fa3;
+}
+/* Style for the whole list */
+.hobby-list {
+  list-style-type: square;   /* Change bullet: circle, square, none */
+  font-size: 18px;           /* Adjust text size */
+  color: #052564;            /* Text color */
+  padding: 10px 25px;        /* Space around list */
+  background-color: #a0bfda; /* Optional background */
+  border-radius: 10px;       /* Rounded corners */
+}
+
+/* Each list item */
+.hobby-list li {
+  margin-bottom: 8px;        /* Space between items */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.hobby-list li:hover {
+  color: #e1213b;            /* Change text color when hovered */
+  transform: scale(1.05);    /* Slight zoom-in effect */
+
+}
+
+/* Style for the fact list */
+.fact-list {
+  list-style-type: circle;   /* Change bullet: circle, square, none */
+  font-size: 18px;           /* Adjust text size */
+  color: #ddd313;            /* Text color */
+  padding: 10px 25px;        /* Space around list */
+  background-color: #da2424f7; /* Optional background */
+  border-radius: 10px;       /* Rounded corners */
+  font: times
+}
+
+/* Each list item */
+.fact-list li {
+  margin-bottom: 8px;        /* Space between items */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.fact-list li:hover {
+  color: #0d0de8;            /* Change text color when hovered */
+  transform: scale(1.00);    /* Slight zoom-in effect */
+}
+/* Style for the fact list */
+.fact-list {
+  list-style-type: circle;   /* Change bullet: circle, square, none */
+  font-size: 18px;           /* Adjust text size */
+  color: #ddd313;            /* Text color */
+  padding: 10px 25px;        /* Space around list */
+  background-color: #da2424f7; /* Optional background */
+  border-radius: 10px;       /* Rounded corners */
+  font: times
+}
+
+/* Each list item */
+.fact-list li {
+  margin-bottom: 8px;        /* Space between items */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.fact-list li:hover {
+  color: #0d0de8;            /* Change text color when hovered */
+  transform: scale(1.00);    /* Slight zoom-in effect */
+}
+/* Style for the Certified list */
+.Certified-list {
+  list-style-type: circle;   /* Change bullet: circle, square, none */
+  font-size: 18px;           /* Adjust text size */
+  color: #3e8ff1;            /* Text color */
+  padding: 10px 25px;        /* Space around list */
+  background-color: #42dd6ef7; /* Optional background */
+  border-radius: 10px;       /* Rounded corners */
+  font: times
+}
+
+/* Each list item */
+.Certified-list {
+  margin-bottom: 8px;        /* Space between items */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.Certified-list li:hover {
+  color: #4f6fb4;            /* Change text color when hovered */
+  transform: scale(1.00);    /* Slight zoom-in effect */
 }
 
