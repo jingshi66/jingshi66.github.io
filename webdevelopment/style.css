@@ -163,4 +163,55 @@ body {
   color: #4f6fb4;            /* Change text color when hovered */
   transform: scale(1.00);    /* Slight zoom-in effect */
 }
+/* ===== REFLECTION PAGE STYLING ===== */
+.reflection-section {
+  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a); /* warm pink-gold gradient */
+  padding: 60px 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings inside reflection */
+.reflection-section h1,
+.reflection-section h2 {
+  color: #932766;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  margin-bottom: 20px;
+}
+
+/* Reflection paragraphs */
+.reflection-section p {
+  color: #1e1e1e;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 20px;
+  background-color: rgba(96, 239, 218, 0.6);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+/* Make first letter fancy */
+.reflection-section p:first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color: #21bbe1;
+  float: left;
+  line-height: 1;
+  padding-right: 5px;
+}
+
+/* Indent every paragraph except the first */
+.reflection-section p:not(:first-child)::first-line {
+  text-indent: 30px;
+}
+
+/* Add subtle hover effect */
+.reflection-section p:hover {
+  background-color: rgba(216, 46, 46, 0.9);
+  transition: background-color 0.3s ease;
+}
 
