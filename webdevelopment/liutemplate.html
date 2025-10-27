@@ -1,65 +1,187 @@
 <!DOCTYPE html>
-<!-- This is the main HTML5 document declaration --> 
 <html lang="en-US">
-<title>Homepage</title>
-   <!-- Just a title--> 
-  <head>
-     <!--
-  Name: Xinbiao Liu
-  Date: September 17, 2025
-  Page: Homepage
-  Description: This code is just cannon fodder material that is stuck inside this coding area but I am just there for reference. 
--->
+<head>
+  <!-- 
+    Name: Xinbiao Liu
+    Date: September 17, 2025
+    Page: Homepage
+    Description: Xinbiao Liu’s personal portfolio homepage featuring navigation, 
+    a personal introduction, and professional contact information.
+  -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <!-- Link to external CSS for styling --> <link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8">
-  </head>
 
-  <body>
-    <header>
-  <div class="logo-container">
-    <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
-  </div>
+  <title>Xinbiao Liu | Homepage</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Optional fallback internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #f0c330;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background-color: #444;
+      list-style: none;
+      padding: 10px;
+    }
+
+    li:hover .dropdown {
+      display: block;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    blockquote {
+      font-style: italic;
+      background-color: #f0f0f0;
+      border-left: 4px solid #333;
+      margin: 20px 0;
+      padding: 10px 15px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .contact-item img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
+    </div>
 
     <nav>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li>
           <a href="about.html">About</a>
-          <!-- Example of 2-tier dropdown -->
           <ul class="dropdown">
             <li><a href="drop.html">Test</a></li>
-                  <li><a href="drop.html">Test</a></li>
+            <li><a href="drop.html">Test</a></li>
             <li><a href="drop.html">Test</a></li>
           </ul>
         </li>
-          <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 
-      <!--
-  Logo and navigation
--->
-      <h1>Xinbiao's Portfolio</h1>
-      <h3>Homepage</h3>
-        <!--
- Homepage
--->
-  <p>Hello I am Xinbiao Liu! My purpose is to build a career that combines creativity, problem-solving, and teamwork while making a meaningful impact on others. So I created a portfolio about myself and my goals! Growing up working in my family’s restaurant, I gained early experience in responsibility, adaptability, and customer service. Those lessons taught me the value of hard work and staying reliable under pressure. In high school, I was a member of DECA, which gave me opportunities to strengthen my leadership, communication, and business skills through teamwork and competitive events. These experiences inspired me to think more deeply about how people learn, connect, and grow in both professional and educational settings. Currently, I am pursuing a degree in Educational Studies with a focus on Educational Games and Simulation Design at the University of Missouri. My long-term goal is to apply my knowledge and skills to develop innovative educational tools and experiences that make learning more interactive, engaging, and accessible for everyone.</p>
-      <!-- Big paragraph and description--> 
-    <blockquote>"You've Got To Enjoy Life, Or Else You'll End Up Wasting It."- Revy from Black Lagoon</blockquote>
-    <footer>Xinbiao Liu 17 September 2025</footer> 
-    <footer>EMAIL: Xinbiao@yahoo.com </footer>
-     <footer>Phone Number: 669-678-9999 </footer>
-     <!--
-  Not real email and address though so don't call it!
--->
-  </body>
+  <main>
+    <h1>Xinbiao's Portfolio</h1>
+    <h3>Homepage</h3>
 
+    <p>
+      Hello, I am <strong>Xinbiao Liu</strong>! My purpose is to build a career that combines creativity, problem-solving, and teamwork while making a meaningful impact on others. 
+      So I created a portfolio about myself and my goals! Growing up working in my family’s restaurant, I gained early experience in responsibility, adaptability, and customer service. 
+      Those lessons taught me the value of hard work and staying reliable under pressure. In high school, I was a member of DECA, which gave me opportunities to strengthen my leadership, 
+      communication, and business skills through teamwork and competitive events. These experiences inspired me to think more deeply about how people learn, connect, and grow in both 
+      professional and educational settings. Currently, I am pursuing a degree in Educational Studies with a focus on Educational Games and Simulation Design at the University of Missouri. 
+      My long-term goal is to apply my knowledge and skills to develop innovative educational tools and experiences that make learning more interactive, engaging, and accessible for everyone.
+    </p>
+
+    <blockquote>
+      "You've Got To Enjoy Life, Or Else You'll End Up Wasting It." — Revy, *Black Lagoon*
+    </blockquote>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Xinbiao Liu | October 27, 2025</p>
+
+  <div class="contact-info">
+  <div class="contact-item">
+    <img src="phone.png" alt="Phone Icon">
+    <span>(669) 678-9999</span>
+  </div>
+  <div class="contact-item">
+    <img src="email.png" alt="Email Icon">
+    <span>Xinbiao@yahoo.com</span>
+  </div>
+</div>
+
+  </footer>
+</body>
 </html>
