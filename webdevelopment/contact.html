@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Xinbiao Liu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <h1>Contact Me</h1>
+    <p>Have a question or just want to say hi? Fill out the form below and I’ll get back to you soon!</p>
+
+    <form action="#" method="post" class="contact-form">
+
+      <!-- Title Dropdown -->
+      <label for="title">Title:</label>
+      <select id="title" name="title" required>
+        <option value="" disabled selected>Select your title</option>
+        <option value="mr">Mr.</option>
+        <option value="ms">Ms.</option>
+        <option value="mrs">Mrs.</option>
+        <option value="dr">Dr.</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Full Name -->
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <!-- Email Address -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <!-- Message -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+      <!-- Select Button -->
+      <label for="reason">Reason for Contact:</label>
+      <select id="reason" name="reason" required>
+        <option value="" disabled selected>Choose a reason</option>
+        <option value="project">Project Inquiry</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <div class="contact-item">
+        <img src="phone.png" alt="Phone Icon">
+        <span>(669) 678-9999</span>
+      </div>
+      <div class="contact-item">
+        <img src="email.png" alt="Email Icon">
+        <span>Xinbiao@yahoo.com</span>
+      </div>
+    </div>
+    <p>© 2025 Xinbiao Liu | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
