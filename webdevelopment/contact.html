@@ -1,18 +1,180 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Xinbiao Liu</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <style>
+    /* CONTACT PAGE STYLES */
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #fffbe6, #f8f9fa);
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #004aad;
+      color: white;
+      padding: 10px 30px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffda00;
+    }
+
+    main.contact-container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    main h1 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      margin-bottom: 25px;
+      color: #444;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: #1cc1f3;
+      outline: none;
+      box-shadow: 0 0 4px rgba(28,193,243,0.4);
+    }
+
+    .contact-form button {
+      background-color: #1cc1f3;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .contact-form button:hover {
+      background-color: #0099cc;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item img {
+      width: 24px; /* fixed smaller icon size */
+      height: 24px;
+      vertical-align: middle;
+      filter: brightness(0) invert(1); /* makes icons white */
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ffda00;
+      margin: 5px 0 0;
+    }
+
+    @media (max-width: 600px) {
+      main.contact-container {
+        margin: 40px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
+      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo" />
     </div>
+
     <nav>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -30,7 +192,6 @@
 
     <form action="#" method="post" class="contact-form">
 
-      <!-- Title Dropdown -->
       <label for="title">Title:</label>
       <select id="title" name="title" required>
         <option value="" disabled selected>Select your title</option>
@@ -41,19 +202,15 @@
         <option value="other">Other</option>
       </select>
 
-      <!-- Full Name -->
       <label for="fullname">Full Name:</label>
       <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
-      <!-- Email Address -->
       <label for="email">Email Address:</label>
       <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
-      <!-- Message -->
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
 
-      <!-- Select Button -->
       <label for="reason">Reason for Contact:</label>
       <select id="reason" name="reason" required>
         <option value="" disabled selected>Choose a reason</option>
@@ -63,7 +220,6 @@
         <option value="other">Other</option>
       </select>
 
-      <!-- Submit Button -->
       <button type="submit">Submit</button>
     </form>
   </main>
