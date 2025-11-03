@@ -1,4 +1,6 @@
-/* HERO background */
+/* ============================
+   HERO SECTION
+============================ */
 .hero {
   width: 100%;
   height: 100vh;
@@ -17,7 +19,6 @@
   border-radius: 15px;
 }
 
-
 /* Info section */
 .info h1 {
   color: #e1213b;
@@ -35,10 +36,10 @@
 /* Button styling */
 .btn {
   display: inline-block;
-  background: linear-gradient(45deg, #ffcc00, #ff9900); /* gold gradient */
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
   color: #000;
   padding: 15px 35px;
-  border-radius: 50px; /* pill shape */
+  border-radius: 50px;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -53,122 +54,107 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.4), 0 0 15px rgba(255,200,0,1);
   background: linear-gradient(45deg, #ffdd33, #ffaa33);
 }
+
+/* ============================
+   BASE STYLES
+============================ */
 body {
   background-color: #15c4e7; 
   margin: 0;
-  font-family: 'Times New Roman', Arial, Helvetica;
+  font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
 }
+
+/* ============================
+   RESUME LINK
+============================ */
 .resume-link {
-  display: inline-block;       /* Makes padding/margin work better */
-  padding: 10px 20px;          /* Inside spacing */
-  margin: 15px 0;              /* Space around the link */
-  border: 2px solid #1cc1f3;   /* Blue border */
-  background-color: #d7e60c;   /* Light blue background */
-  color: #e50f56;              /* Text color */
-  text-decoration: none;       /* Remove underline */
-  border-radius: 8px;          /* Rounded corners */
-  font-weight: bold;           /* Make text stand out */
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 15px 0;
+  border: 2px solid #1cc1f3;
+  background-color: #d7e60c;
+  color: #e50f56;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .resume-link:hover {
-  background-color: #e4ffcc;   /* Change background when hovered */
+  background-color: #e4ffcc;
   border-color: #005fa3;
 }
-/* Style for the whole list */
+
+/* ============================
+   LIST STYLES
+============================ */
 .hobby-list {
-  list-style-type: square;   /* Change bullet: circle, square, none */
-  font-size: 18px;           /* Adjust text size */
-  color: #052564;            /* Text color */
-  padding: 10px 25px;        /* Space around list */
-  background-color: #a0bfda; /* Optional background */
-  border-radius: 10px;       /* Rounded corners */
+  list-style-type: square;
+  font-size: 18px;
+  color: #052564;
+  padding: 10px 25px;
+  background-color: #a0bfda;
+  border-radius: 10px;
 }
 
-/* Each list item */
 .hobby-list li {
-  margin-bottom: 8px;        /* Space between items */
+  margin-bottom: 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect */
 .hobby-list li:hover {
-  color: #e1213b;            /* Change text color when hovered */
-  transform: scale(1.05);    /* Slight zoom-in effect */
-
+  color: #e1213b;
+  transform: scale(1.05);
 }
 
-/* Style for the fact list */
+/* Fact List */
 .fact-list {
-  list-style-type: circle;   /* Change bullet: circle, square, none */
-  font-size: 18px;           /* Adjust text size */
-  color: #ddd313;            /* Text color */
-  padding: 10px 25px;        /* Space around list */
-  background-color: #da2424f7; /* Optional background */
-  border-radius: 10px;       /* Rounded corners */
-  font: times
+  list-style-type: circle;
+  font-size: 18px;
+  color: #ddd313;
+  padding: 10px 25px;
+  background-color: #da2424f7;
+  border-radius: 10px;
+  font-family: 'Times New Roman', serif;
 }
 
-/* Each list item */
 .fact-list li {
-  margin-bottom: 8px;        /* Space between items */
+  margin-bottom: 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect */
 .fact-list li:hover {
-  color: #0d0de8;            /* Change text color when hovered */
-  transform: scale(1.00);    /* Slight zoom-in effect */
-}
-/* Style for the fact list */
-.fact-list {
-  list-style-type: circle;   /* Change bullet: circle, square, none */
-  font-size: 18px;           /* Adjust text size */
-  color: #ddd313;            /* Text color */
-  padding: 10px 25px;        /* Space around list */
-  background-color: #da2424f7; /* Optional background */
-  border-radius: 10px;       /* Rounded corners */
-  font: times
+  color: #0d0de8;
+  transform: scale(1.05);
 }
 
-/* Each list item */
-.fact-list li {
-  margin-bottom: 8px;        /* Space between items */
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect */
-.fact-list li:hover {
-  color: #0d0de8;            /* Change text color when hovered */
-  transform: scale(1.00);    /* Slight zoom-in effect */
-}
-/* 🎓 Certified List Styling */
+/* Certified List */
 .certified-list {
   list-style-type: circle;
   font-size: 18px;
-  color: #052564; /* deep blue for readability */
+  color: #052564;
   padding: 15px 30px;
-  background-color: #7ee6a3; /* soft mint green background */
+  background-color: #7ee6a3;
   border-radius: 12px;
   font-family: 'Times New Roman', serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Each list item */
 .certified-list li {
   margin-bottom: 10px;
   transition: color 0.3s ease, transform 0.3s ease;
   line-height: 1.6;
 }
 
-/* Hover effect */
 .certified-list li:hover {
-  color: #e1213b; /* red accent (matches your other hover effects) */
+  color: #e1213b;
   transform: scale(1.02);
 }
 
-/* ===== REFLECTION PAGE STYLING ===== */
+/* ============================
+   REFLECTION SECTION
+============================ */
 .reflection-section {
-  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a); /* warm pink-gold gradient */
+  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
   padding: 60px 30px;
   border-radius: 20px;
   max-width: 900px;
@@ -176,7 +162,6 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Headings inside reflection */
 .reflection-section h1,
 .reflection-section h2 {
   color: #932766;
@@ -185,7 +170,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Reflection paragraphs */
 .reflection-section p {
   color: #1e1e1e;
   font-size: 18px;
@@ -195,9 +179,9 @@ body {
   background-color: rgba(96, 239, 218, 0.6);
   padding: 15px 20px;
   border-radius: 10px;
+  text-indent: 2em;
 }
 
-/* Make first letter fancy */
 .reflection-section p:first-letter {
   font-size: 200%;
   font-weight: bold;
@@ -207,17 +191,14 @@ body {
   padding-right: 5px;
 }
 
-/* Indent every paragraph except the first */
-.reflection-section p:not(:first-child)::first-line {
-  text-indent: 30px;
-}
-
-/* Add subtle hover effect */
 .reflection-section p:hover {
   background-color: rgba(216, 46, 46, 0.9);
   transition: background-color 0.3s ease;
 }
-/* Image and video styling */
+
+/* ============================
+   IMAGE & VIDEO
+============================ */
 .about-image, .about-video {
   text-align: center;
   margin: 20px auto;
@@ -245,58 +226,10 @@ figcaption {
   margin-top: 5px;
   font-style: italic;
 }
-/* Indent first line of each paragraph */
-.reflection-section p {
-  text-indent: 2em;
-  line-height: 1.6;
-  margin-bottom: 1em;
-}
 
-/* Example of pseudo-classes */
-a:hover {
-  color: #ffb300; /* changes color when hovering over links */
-}
-
-a:active {
-  color: #e65100;
-}
-
-/* 2-tier dropdown menu */
-.nav-menu {
-  list-style: none;
-  background-color: #b8da0d;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.nav-menu li {
-  position: relative;
-}
-
-.nav-menu a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #ddda0f;
-  list-style: none;
-  padding: 0;
-}
-
-.nav-menu li:hover .dropdown {
-  display: block;
-}
-
-.dropdown li a:hover {
-  background-color: #666;
-}
-/* Basic nav styling */
+/* ============================
+   NAVIGATION MENU
+============================ */
 nav {
   background-color: #333;
 }
@@ -324,7 +257,7 @@ nav {
   background-color: #555;
 }
 
-/* Dropdown menu (hidden by default) */
+/* Dropdown menu */
 .dropdown {
   display: none;
   position: absolute;
@@ -339,7 +272,6 @@ nav {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/* Dropdown items */
 .dropdown li a {
   padding: 10px 15px;
   color: white;
@@ -349,212 +281,13 @@ nav {
   background-color: #555;
 }
 
-/* Show dropdown on hover */
 .nav-menu li:hover > .dropdown {
   display: block;
 }
-/* ============================
-   ABOUT PAGE CSS (replace file)
-   Clean, minimal, and focused
-   ============================ */
-
-/* ---------- Reset / Base ---------- */
-* { box-sizing: border-box; }
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #15c4e7;
-  color: #222;
-}
-
-/* ---------- Header / Nav ---------- */
-header {
-  background: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-}
-
-.logo { height: 56px; width: auto; display: block; }
-
-.nav-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.nav-menu a:hover { background: #444; }
-
-/* Simple dropdown behaviour (desktop hover) */
-.dropdown { display: none; position: absolute; background: #333; padding: 6px 0; border-radius: 6px; }
-.nav-menu li { position: relative; }
-.nav-menu li:hover > .dropdown { display: block; }
-.dropdown a { display: block; padding: 8px 12px; color: #fff; }
-
-/* ---------- Page container / main ---------- */
-main {
-  max-width: 900px;
-  margin: 24px auto;
-  padding: 20px;
-  background: rgba(255,255,255,0.95);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-/* Headings & text */
-h1 { color: #e1213b; font-size: 30px; margin: 0 0 8px; text-align: center; }
-h2, h3 { color: #052564; margin-top: 18px; }
-p { font-size: 16px; line-height: 1.6; margin: 12px 0; color: #222; }
-
-/* ---------- Images & video ---------- */
-.about-image, .about-video { text-align: center; margin: 18px 0; }
-.profile-pic {
-  width: 250px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  transition: transform 0.25s ease;
-}
-.profile-pic:hover { transform: scale(1.03); }
-
-.about-video video {
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.14);
-}
-
-/* figcaption */
-figcaption { font-size: 0.9rem; color: #555; margin-top: 6px; font-style: italic; }
-
-/* ---------- Lists ---------- */
-.hobby-list { list-style: square; padding: 12px 18px; background: #a0bfda; border-radius: 8px; color: #052564; }
-.fact-list { list-style: circle; padding: 12px 18px; background: rgba(218,36,36,0.95); border-radius: 8px; color: #fff; }
-.certified-list { list-style: circle; padding: 12px 18px; background: #7ee6a3; border-radius: 8px; color: #052564; }
-
-/* sub-lists */
-.hobby-list ul, .fact-list ul, .certified-list ul { margin-top: 8px; margin-left: 18px; list-style: disc; }
-
-/* ---------- Resume link ---------- */
-.resume-link {
-  display: inline-block;
-  padding: 10px 18px;
-  margin: 18px 0;
-  border-radius: 8px;
-  border: 2px solid #1cc1f3;
-  background-color: #d7e60c;
-  color: #e50f56;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* ---------- Footer ---------- */
-footer {
-  background: #222;
-  color: #fff;
-  padding: 18px 12px;
-  text-align: center;
-  margin-top: 24px;
-}
-
-.contact-info {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
-
-.contact-item { display: flex; gap: 8px; align-items: center; color: #fff; font-weight: 600; }
-
-/* If you use icon images, keep them small */
-.contact-item img { width: 20px; height: 20px; display: inline-block; }
-
-/* ---------- Responsive tweaks ---------- */
-@media (max-width: 700px) {
-  header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
-  .nav-menu { flex-wrap: wrap; gap: 6px; }
-  main { margin: 12px; padding: 16px; }
-  h1 { font-size: 24px; }
-  .profile-pic { width: 200px; }
-}
 
 /* ============================
-   PRINT STYLES — About Page ONLY
-   Requirements:
-   - 1" margins
-   - black text only
-   - serif font
-   - show only: h1, main description p, education/certified list, footer contact text
-   - hide logos/icons/video/images
-   ============================ */
-@media print {
-  /* enforce 1" margins */
-  @page { margin: 1in; }
-
-  html, body {
-    background: #fff !important;
-    color: #000 !important;
-    font-family: "Times New Roman", Times, serif !important;
-    margin: 0 !important;
-    -webkit-print-color-adjust: exact;
-  }
-
-  /* hide navigation, logos, images, video, and other non-print elements */
-  header, nav, .logo, .about-image, .about-video, .profile-pic, video, img, .nav-menu, .dropdown, .resume-link {
-    display: none !important;
-  }
-
-  /* show only allowed elements and force black serif text */
-  body * { color: #000 !important; font-family: "Times New Roman", Times, serif !important; }
-
-  /* keep only these visible */
-  h1, main, p, .certified-list, footer {
-    display: block !important;
-  }
-
-  /* ensure lists are printed cleanly */
-  .certified-list, .certified-list li, ul, ol {
-    color: #000 !important;
-    font-family: "Times New Roman", Times, serif !important;
-  }
-
-  /* sizing to help fit one page */
-  h1 { font-size: 22px; margin-bottom: 10px; text-align: left; }
-  p { font-size: 12pt; line-height: 1.4; margin: 6px 0; text-align: left; }
-  .certified-list { font-size: 12pt; margin-top: 6px; padding-left: 18px; }
-
-  /* footer: only contact text (icons already hidden above) */
-  footer {
-    background: none !important;
-    color: #000 !important;
-    border-top: 1px solid #000;
-    padding-top: 8px;
-    text-align: left;
-    font-size: 12pt;
-  }
-
-  /* avoid page breaks inside main content */
-  main, section, .certified-list { page-break-inside: avoid; }
-}
-/* Contact Page Styles */
+   CONTACT PAGE
+============================ */
 .contact-container {
   max-width: 700px;
   margin: 40px auto;
@@ -619,33 +352,57 @@ footer {
   background-color: #2563eb;
 }
 
-/* Contact info in footer */
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.contact-item img {
-  width: 20px;
-  height: 20px;
-}
-
-/* Responsive */
+/* Fix: Missing braces in media query */
 @media (max-width: 600px) {
   .contact-container {
     padding: 15px;
   }
+
   .contact-info {
     flex-direction: column;
   }
 }
 
+/* ============================
+   GRID ABOUT PAGE
+============================ */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgb(146, 212, 134);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #92e711;
+  padding-bottom: 0.5em;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
