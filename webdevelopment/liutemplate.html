@@ -10,120 +10,12 @@
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Xinbiao Liu | Homepage</title>
 
-  <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Optional fallback internal CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fafafa;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      height: 60px;
-      width: auto;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      position: relative;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: #f0c330;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      background-color: #444;
-      list-style: none;
-      padding: 10px;
-    }
-
-    li:hover .dropdown {
-      display: block;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    blockquote {
-      font-style: italic;
-      background-color: #f0f0f0;
-      border-left: 4px solid #333;
-      margin: 20px 0;
-      padding: 10px 15px;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 16px;
-    }
-
-    .contact-item img {
-      width: 20px;
-      height: 20px;
-    }
-  </style>
 </head>
 
 <body>
@@ -133,14 +25,18 @@
     </div>
 
     <nav>
-      <ul class="nav-menu">
+      <!-- Hamburger icon -->
+      <span class="menu-icon">&#9776;</span>
+
+      <!-- ✅ Changed class name to match CSS -->
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li>
           <a href="about.html">About</a>
           <ul class="dropdown">
-            <li><a href="drop.html">Test</a></li>
-            <li><a href="drop.html">Test</a></li>
-            <li><a href="drop.html">Test</a></li>
+            <li><a href="drop.html">Test 1</a></li>
+            <li><a href="drop.html">Test 2</a></li>
+            <li><a href="drop.html">Test 3</a></li>
           </ul>
         </li>
         <li><a href="reflection.html">Reflection</a></li>
@@ -164,24 +60,5 @@
     </p>
 
     <blockquote>
-      "You've Got To Enjoy Life, Or Else You'll End Up Wasting It." — Revy, *Black Lagoon*
+      "You've Got To Enjoy Life, Or Else You'll End Up Wasting It." — Revy, <em>Black Lagoon</em>
     </blockquote>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Xinbiao Liu | October 27, 2025</p>
-
-  <div class="contact-info">
-  <div class="contact-item">
-    <img src="phone.png" alt="Phone Icon">
-    <span>(669) 678-9999</span>
-  </div>
-  <div class="contact-item">
-    <img src="email.png" alt="Email Icon">
-    <span>Xinbiao@yahoo.com</span>
-  </div>
-</div>
-
-  </footer>
-</body>
-</html>
