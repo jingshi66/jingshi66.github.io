@@ -109,7 +109,7 @@ nav {
 
 .dropdown li a {
   padding: 10px 15px;
-  color: white;
+  color: rgb(168, 33, 33);
 }
 
 .dropdown li a:hover {
@@ -148,7 +148,7 @@ nav {
   font-size: 18px;
   color: #052564;
   padding: 10px 25px;
-  background-color: #a0bfda;
+  background-color: #5585b0;
   border-radius: 10px;
 }
 
@@ -337,7 +337,7 @@ figcaption {
 
 .contact-form button {
   background-color: #3b82f6;
-  color: white;
+  color: rgb(150, 52, 52);
   font-size: 1rem;
   padding: 12px;
   border: none;
@@ -471,7 +471,7 @@ main h1 {
   max-width: 700px;
   margin: 40px auto;
   padding: 18px;                 /* slightly reduced padding */
-  background-color: #f9f9f9;
+  background-color: #752828;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   box-sizing: border-box;

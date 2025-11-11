@@ -13,9 +13,175 @@
   <title>Xinbiao Liu | Homepage</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      background-color: #333;
+      color: rgb(44, 141, 158);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 45px;
+      width: auto;
+    }
+
+    nav {
+      position: relative;
+      width: 100%;
+    }
+
+    /* NAV LINKS */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgb(156, 64, 64);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.3s;
+      padding: 4px 0;
+    }
+
+    .nav-links a:hover {
+      color: #f0c330;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      list-style: none;
+      min-width: 140px;
+      padding: 8px 0;
+      border-radius: 4px;
+    }
+
+    .nav-links li:hover .dropdown {
+      display: block;
+    }
+
+    /* HAMBURGER ICON */
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      user-select: none;
+      background: none;
+      border: none;
+      color: rgb(144, 55, 55);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #222;
+      color: rgb(155, 101, 101);
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+    }
+
+    /* RESPONSIVE MENU */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: #333;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0; /* Hidden by default */
+        transition: max-height 0.4s ease-out;
+        border-top: 1px solid #444;
+      }
+
+      .nav-links.active {
+        max-height: 400px; /* Drop-down effect */
+        transition: max-height 0.4s ease-in;
+      }
+
+      .nav-links li {
+        text-align: center;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+      }
+
+      /* Hide dropdown entirely on mobile */
+      .dropdown {
+        display: none !important;
+      }
+    }
+
+    /* MAIN CONTENT STYLING */
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    h3 {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      margin: 20px auto;
+      padding: 15px;
+      background: #cca6a6;
+      border-left: 4px solid #f0c330;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,9 +192,8 @@
 
     <nav>
       <!-- Hamburger icon -->
-      <span class="menu-icon">&#9776;</span>
+      <button class="menu-icon" aria-expanded="false" aria-label="Toggle navigation">☰</button>
 
-      <!-- ✅ Changed class name to match CSS -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li>
@@ -62,3 +227,26 @@
     <blockquote>
       "You've Got To Enjoy Life, Or Else You'll End Up Wasting It." — Revy, <em>Black Lagoon</em>
     </blockquote>
+  </main>
+
+  <footer>
+    <p>© 2025 Xinbiao Liu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // ✅ Toggle dropdown menu on mobile
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuIcon = document.querySelector(".menu-icon");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+        menuIcon.setAttribute("aria-expanded", String(!expanded));
+        menuIcon.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
+      });
+    });
+  </script>
+</body>
+</html>
