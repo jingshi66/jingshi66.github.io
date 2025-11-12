@@ -1,16 +1,24 @@
-/* RESET */
+/* ============================================
+   Name: Xinbiao Liu
+   Date: November 11, 2025
+   File: nav.css
+   Description: Navigation and header styling 
+   for Xinbiao Liu’s responsive portfolio website.
+   ============================================ */
+
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 25px;
+  padding: 12px 25px;
   background-color: #333;
   color: white;
   position: relative;
@@ -22,7 +30,7 @@ header {
   width: auto;
 }
 
-/* NAVIGATION */
+/* ========== NAVIGATION ========== */
 nav {
   position: relative;
 }
@@ -31,6 +39,7 @@ nav {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-links li {
@@ -51,7 +60,7 @@ nav {
   color: #f0c330;
 }
 
-/* DROPDOWN */
+/* ========== DROPDOWN ========== */
 .dropdown {
   display: none;
   position: absolute;
@@ -59,24 +68,49 @@ nav {
   left: 0;
   background-color: #444;
   list-style: none;
-  min-width: 140px;
-  padding: 8px 0;
+  min-width: 150px;
   border-radius: 4px;
+  padding: 8px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.nav-links li:hover .dropdown {
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-align: left;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+/* Show dropdown on hover (desktop only) */
+.nav-links li:hover > .dropdown {
   display: block;
 }
 
-/* HAMBURGER ICON */
+/* ========== HAMBURGER ICON ========== */
 .menu-icon {
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
   display: none;
   user-select: none;
+  background: none;
+  border: none;
+  color: white;
+  transition: color 0.3s;
 }
 
-/* FOOTER */
+.menu-icon:hover {
+  color: #f0c330;
+}
+
+/* ========== FOOTER ========== */
 footer {
   background-color: #222;
   color: white;
@@ -85,45 +119,54 @@ footer {
   margin-top: 40px;
 }
 
-/* RESPONSIVE MENU */
+/* ========== RESPONSIVE MENU ========== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 12px 18px;
   }
 
+  /* Show hamburger icon */
   .menu-icon {
     display: block;
     align-self: flex-end;
   }
 
+  /* Stack links vertically when active */
   .nav-links {
     flex-direction: column;
     width: 100%;
     background-color: #333;
     overflow: hidden;
-    max-height: 0;              /* Start hidden */
+    max-height: 0;
     transition: max-height 0.4s ease-out;
   }
 
   .nav-links.active {
-    max-height: 400px;          /* Drops down smoothly */
+    max-height: 400px; /* expands when active */
     transition: max-height 0.4s ease-in;
   }
 
   .nav-links li {
+    width: 100%;
     text-align: center;
   }
 
   .nav-links a {
     display: block;
-    padding: 10px;
+    padding: 12px;
     border-bottom: 1px solid #444;
   }
 
-  /* Hide dropdown entirely on mobile */
+  /* Dropdowns disabled on mobile */
   .dropdown {
     display: none !important;
+  }
+}
+
+/* ========== SMALL SCREEN FONT ADJUSTMENT ========== */
+@media (max-width: 600px) {
+  .nav-links a {
+    font-size: 0.9rem;
   }
 }
