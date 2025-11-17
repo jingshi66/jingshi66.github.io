@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
+<div class="hamburger">&#9776;</div>
 
 <body>
   <header>
@@ -127,6 +128,56 @@
     <div class="resume-wrapper">
       <a href="resume.pdf" class="resume-link" target="_blank">Download My Resume</a>
     </div>
+
+    <figure class="data-table">
+  <figcaption>Weekly Study Schedule</figcaption>
+
+  <table>
+    <caption class="sr-only">Weekly Study Schedule Table</caption>
+
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Study Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">Monday</th>
+        <td>Web Development</td>
+        <td>2 hours</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Tuesday</th>
+        <td>International Relations</td>
+        <td>2 hours</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Wednesday</th>
+        <td>Cultural Anthropology</td>
+        <td>5 hours</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Thursday</th>
+        <td>Intro to Peace Studies</td>
+        <td>1 hour</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th scope="row">Total</th>
+        <td colspan="2">7.5 hours</td>
+      </tr>
+    </tfoot>
+  </table>
+</figure>
+
   </main>
 
   <footer>
@@ -142,5 +193,16 @@
     </div>
     <p>&copy; 2025 Xinbiao Liu — Last updated October 6, 2025</p>
   </footer>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  
+</script>
+
 </body>
 </html>
