@@ -419,3 +419,45 @@ figcaption {
     padding: 0.5rem;
   }
 }
+/* ============================
+   FOOTER + ICON ANIMATION
+============================ */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.footer-icon {
+  color: #ffdb70;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-icon i {
+  font-size: 24px;
+  transition: transform 0.35s ease, color 0.35s ease, filter 0.35s ease;
+}
+
+.footer-icon:hover i {
+  transform: scale(1.25);
+  color: #ffffff;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.footer-icon:hover {
+  color: #ffffff;
+}
