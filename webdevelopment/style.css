@@ -461,3 +461,25 @@ figcaption {
 .footer-icon:hover {
   color: #ffffff;
 }
+/* Custom font from Google Fonts applied to site */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom font from Google Fonts applied to site */
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-family: "Nabla", cursive;
+}
+/* Custom styles for all <h2> elements */
+h2 {
+    font-family: "Nabla", cursive;   /* uses your custom Google font */
+    letter-spacing: 2px;             /* text effect #1 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25); /* text effect #2 */
+    font-size: 2.2rem;               /* optional: makes it stand out */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
