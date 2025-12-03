@@ -1,319 +1,290 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <!-- 
-    Name: Xinbiao Liu
-    Date: November 11, 2025
-    Page: Project
-    Description: Project page showcasing Xinbiao Liu’s competencies and learning experiences,
-    using responsive design with Grid and Flexbox.
-  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xinbiao Liu | Project</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    /* =============== RESET =============== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background-color: #4eddc8;
-    }
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* =============== HEADER & NAVIGATION =============== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 25px;
-      background-color: #333;
-      color: rgb(188, 248, 158);
-      position: relative;
-      z-index: 10;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4eddc8;
+  color: #222;
+  line-height: 1.6;
+}
 
-    .logo {
-      height: 45px;
-      width: auto;
-    }
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 12px 25px;
+  color: rgb(188, 248, 158);
+  position: relative;
+}
 
-    nav {
-      position: relative;
-    }
+.logo {
+  height: 45px;
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
+/* NAVIGATION */
+nav {
+  position: relative;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-    .nav-links a:hover {
-      color: #f0c330;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
 
-    /* ===== DROPDOWN ===== */
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #ba2727;
-      list-style: none;
-      min-width: 150px;
-      border-radius: 4px;
-      padding: 8px 0;
-      z-index: 20;
-    }
+.nav-links a:hover {
+  color: #f0c330;
+}
 
-    .dropdown li a {
-      color: #fff;
-      display: block;
-      padding: 10px 15px;
-    }
+/* DROPDOWN (desktop) */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ba2727;
+  list-style: none;
+  min-width: 150px;
+  padding: 8px 0;
+  border-radius: 5px;
+}
 
-    .dropdown li a:hover {
-      background-color: #555;
-    }
+.dropdown li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
 
-    .nav-links li:hover .dropdown {
-      display: block;
-    }
+.dropdown li a:hover {
+  background: #555;
+}
 
-    /* ===== HAMBURGER ===== */
-    .menu-icon {
-      font-size: 28px;
-      cursor: pointer;
-      display: none;
-      user-select: none;
-      background: none;
-      border: none;
-      color: white;
-    }
+/* Desktop hover rule */
+.nav-links > li:hover > .dropdown {
+  display: block;
+}
 
-    /* =============== MAIN CONTENT =============== */
-    main {
-      padding: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
+/* HAMBURGER */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #222;
-    }
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
 
-    h3 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #666;
-    }
+h1, h3 {
+  text-align: center;
+}
 
-    /* ===== GRID LAYOUT ===== */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    section {
-      background: rgb(80, 197, 218);
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
+section {
+  background: rgb(80, 197, 218);
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    section:hover {
-      transform: translateY(-5px);
-    }
+section h2 {
+  color: #a33;
+  margin-bottom: 10px;
+}
 
-    section h2 {
-      color: #a33;
-      margin-bottom: 10px;
-    }
+figure img {
+  width: 100%;
+  border-radius: 6px;
+}
 
-    figure {
-      text-align: center;
-      margin: 15px 0;
-    }
+/* FOOTER */
+footer {
+  background: #222;
+  color: rgb(155, 101, 101);
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+}
 
-    figure img {
-      width: 100%;
-      border-radius: 6px;
-    }
+/* MOBILE MENU */
+@media (max-width: 768px) {
 
-    figure figcaption {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 5px;
-    }
+  .menu-icon {
+    display: block;
+  }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background-color: #222;
-      color: rgb(155, 101, 101);
-      text-align: center;
-      padding: 12px;
-      margin-top: 40px;
-    }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #333;
+    width: 240px;
+    padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    transition: max-height 0.3s ease-out;
+  }
 
-    /* =============== RESPONSIVE MENU =============== */
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
+  .nav-links.active {
+    max-height: 400px;
+  }
 
-      .nav-links {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #333;
-        width: 220px;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease-out;
-        border-radius: 0 0 10px 10px;
-      }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
 
-      .nav-links.active {
-        max-height: 400px;
-      }
+  .nav-links a {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    display: block;
+  }
 
-      .nav-links li {
-        width: 100%;
-        text-align: center;
-      }
+  /* Disable desktop hover dropdown */
+  .nav-links > li:hover > .dropdown {
+    display: none;
+  }
 
-      .nav-links a {
-        padding: 12px;
-        display: block;
-        border-bottom: 1px solid #444;
-      }
+  /* Mobile dropdown opened manually */
+  .nav-links li.show .dropdown {
+    display: block;
+    position: static;
+    background: #444;
+    border-radius: 0;
+  }
 
-      /* Disable hover dropdown on mobile */
-      .nav-links li:hover .dropdown {
-        display: none;
-      }
-
-      /* Mobile dropdown toggle */
-      .nav-links li.show .dropdown {
-        display: block;
-        position: static;
-        background: #444;
-        border-radius: 0;
-      }
-
-      .dropdown li a {
-        padding-left: 25px;
-      }
-    }
-  </style>
+  .dropdown a {
+    padding-left: 25px;
+  }
+}
+</style>
 </head>
 
+
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
-    </div>
 
-    <nav>
-      <button class="menu-icon" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+<header>
+  <img src="logo.png" class="logo" alt="Xinbiao Liu logo">
 
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#competencies" class="dropdown-toggle">Competencies ▾</a>
-          <ul class="dropdown">
-            <li><a href="#People">Design</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#food">food</a></li>
-          </ul>
-        </li>
-        <li><a href="reflection.html">Reflection</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button class="menu-icon" aria-expanded="false">☰</button>
 
-  <main>
-    <h1>Xinbiao’s Projects</h1>
-    <h3>Showcasing My Core Competencies</h3>
+  <nav>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
 
-    <div class="project-grid" id="competencies">
-      <section id="design">
-        <h2>Getting along with new people</h2>
-        <p>I get along well with people in my club by being friendly, open-minded, and respectful. I make an effort to listen, share ideas, and include everyone, which helps create a positive and cooperative environment. Below is me and VSA!</p>
-        <figure>
-          <img src="VSAGroup.png" alt="Picture of our group">
-          <figcaption>The whole VSA Group!</figcaption>
-        </figure>
-      </section>
+      <li>
+        <a href="#" class="dropdown-toggle">Competencies ▾</a>
+        <ul class="dropdown">
+          <li><a href="#People">Design</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#food">Food</a></li>
+        </ul>
+      </li>
 
-      <section id="leadership">
-        <h2>Leadership & Collaboration</h2>
-        <p>My leadership experience in DECA taught me the importance of teamwork and communication. 
-          I lead projects by encouraging creativity, problem-solving, and shared goals.</p>
-        <figure>
-          <img src="Mayor.png" alt="Team collaboration project">
-          <figcaption>Presenting our projects to the mayor!</figcaption>
-        </figure>
-      </section>
+      <li><a href="reflection.html">Reflection</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <section id="development">
-        <h2>Culinary Arts</h2>
-        <p>I was in culinary arts during my senior year and made many delicious dishes! I now cook more in culinary arts!</p>
-        <figure>
-          <img src="food.png" alt="Pic of food">
-          <figcaption>One of my culinary dishes</figcaption>
-        </figure>
-      </section>
-    </div>
-  </main>
+<main>
+  <h1>Xinbiao’s Projects</h1>
+  <h3>Showcasing My Core Competencies</h3>
 
-  <footer>
-    <p>© 2025 Xinbiao Liu. All rights reserved.</p>
-  </footer>
+  <div class="project-grid">
+    <section id="design">
+      <h2>Getting along with new people</h2>
+      <p>I get along well with people in my club...</p>
+      <figure>
+        <img src="VSAGroup.png">
+        <figcaption>The whole VSA Group!</figcaption>
+      </figure>
+    </section>
 
-  <script>
-    // Hamburger toggle
-    const menuIcon = document.querySelector(".menu-icon");
-    const navMenu = document.getElementById("nav-menu");
+    <section id="leadership">
+      <h2>Leadership & Collaboration</h2>
+      <p>My leadership experience in DECA taught me...</p>
+      <figure>
+        <img src="Mayor.png">
+        <figcaption>Presenting to the mayor!</figcaption>
+      </figure>
+    </section>
 
-    menuIcon.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      const expanded = menuIcon.getAttribute("aria-expanded") === "true";
-      menuIcon.setAttribute("aria-expanded", String(!expanded));
-      menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
-    });
+    <section id="development">
+      <h2>Culinary Arts</h2>
+      <p>I was in culinary arts...</p>
+      <figure>
+        <img src="food.png">
+        <figcaption>One of my dishes</figcaption>
+      </figure>
+    </section>
+  </div>
+</main>
 
-    // Mobile dropdown toggle
-    const dropdownToggle = document.querySelector(".dropdown-toggle");
-    dropdownToggle.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdownToggle.parentElement.classList.toggle("show");
-      }
-    });
-  </script>
+<footer>
+  © 2025 Xinbiao Liu
+</footer>
+
+
+<script>
+/* HAMBURGER */
+const menuIcon = document.querySelector(".menu-icon");
+const navMenu = document.getElementById("nav-menu");
+
+menuIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+  menuIcon.setAttribute("aria-expanded", String(!expanded));
+  menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+});
+
+/* MOBILE DROPDOWN */
+document.querySelector(".dropdown-toggle")
+  .addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.target.parentElement.classList.toggle("show");
+    }
+  });
+</script>
+
 </body>
 </html>

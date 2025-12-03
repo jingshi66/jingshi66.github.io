@@ -143,13 +143,14 @@ footer {
   }
 
   .nav-links.active {
-    max-height: 400px; /* expands when active */
+    max-height: 500px; /* increased to allow dropdowns to expand */
     transition: max-height 0.4s ease-in;
   }
 
   .nav-links li {
     width: 100%;
     text-align: center;
+    position: relative; /* needed for mobile dropdown toggle */
   }
 
   .nav-links a {
@@ -158,9 +159,12 @@ footer {
     border-bottom: 1px solid #444;
   }
 
-  /* Dropdowns disabled on mobile */
-  .dropdown {
-    display: none !important;
+  /* Mobile dropdown toggle */
+  .nav-links li.show > .dropdown {
+    display: block;
+    position: static;
+    background-color: #444;
+    border-radius: 0;
   }
 }
 

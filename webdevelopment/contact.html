@@ -171,20 +171,22 @@
 <body>
 
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo" />
-    </div>
+  <div class="logo-container">
+    <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
+  </div>
 
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="reflection.html">Reflection</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button class="menu-icon" aria-expanded="false">☰</button>
+
+  <nav>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main class="contact-container">
     <h1>Contact Me</h1>
@@ -237,6 +239,18 @@
     </div>
     <p>© 2025 Xinbiao Liu | All Rights Reserved</p>
   </footer>
+<script>
+/* HAMBURGER */
+const menuIcon = document.querySelector(".menu-icon");
+const navMenu = document.getElementById("nav-menu");
+
+menuIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+  menuIcon.setAttribute("aria-expanded", String(!expanded));
+  menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+});
+</script>
 
 </body>
 </html>

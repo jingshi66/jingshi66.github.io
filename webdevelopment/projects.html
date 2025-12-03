@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
+  <!-- 
+    Name: Xinbiao Liu
+    Date: November 11, 2025
+    Page: Project
+    Description: Project page showcasing Xinbiao Liu’s competencies and learning experiences,
+    using responsive design with Grid and Flexbox.
+  -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xinbiao's Portfolio</title>
-  <link rel="stylesheet" href="nav.css">
-<link rel="stylesheet" href="style.css">
-<header>
-  <div class="logo-container">
-    <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
-  </div>
+  <title>Xinbiao Liu | Project</title>
 
-  <button class="menu-icon" aria-expanded="false">☰</button>
-
-  <nav>
-    <ul class="nav-links" id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="reflection.html">Reflection</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<style>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
     /* =============== RESET =============== */
     * {
       margin: 0;
@@ -238,46 +227,93 @@
       }
     }
   </style>
-
 </head>
 
 <body>
-  <section class="hero">
-    <div class="container">
-      <div class="info">
-        <h1>Xinbiao's Portfolio</h1>
-        <p>Hello I am Xinbiao Liu! My purpose is to build a career that combines creativity, problem-solving, and teamwork while making a meaningful impact on others. So I created a portfolio about myself and my goals! Growing up working in my family’s restaurant, I gained early experience in responsibility, adaptability, and customer service. Those lessons taught me the value of hard work and staying reliable under pressure. In high school, I was a member of DECA, which gave me opportunities to strengthen my leadership, communication, and business skills through teamwork and competitive events. These experiences inspired me to think more deeply about how people learn, connect, and grow in both professional and educational settings. Currently, I am pursuing a degree in Educational Studies with a focus on Educational Games and Simulation Design at the University of Missouri. My long-term goal is to apply my knowledge and skills to develop innovative educational tools and experiences that make learning more interactive, engaging, and accessible for everyone.</p>
-        <a href="#" class="btn">Learn More</a>
-      </div>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Xinbiao Liu site logo" class="logo">
     </div>
-  </section>
 
-  <blockquote>"You've Got To Enjoy Life, Or Else You'll End Up Wasting It." - Revy from Black Lagoon</blockquote>
- <footer class="site-footer">
-  <p>Xinbiao Liu — 30 September 2025</p>
+    <nav>
+      <button class="menu-icon" aria-expanded="false" aria-label="Toggle navigation">☰</button>
 
-  <div class="footer-icons">
-    <a href="mailto:Xinbiao@yahoo.com" class="footer-icon">
-      <i class="fa-solid fa-envelope"></i> EMAIL: Xinbiao@yahoo.com
-    </a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#competencies" class="dropdown-toggle">Competencies ▾</a>
+          <ul class="dropdown">
+            <li><a href="#People">Design</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#food">food</a></li>
+          </ul>
+        </li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <a href="tel:6696789999" class="footer-icon">
-      <i class="fa-solid fa-phone"></i> Phone Number: 669-678-9999
-    </a>
-  </div>
-</footer>
-<script>
-/* HAMBURGER */
-const menuIcon = document.querySelector(".menu-icon");
-const navMenu = document.getElementById("nav-menu");
+  <main>
+    <h1>Xinbiao’s Projects</h1>
+    <h3>Showcasing My Core Competencies</h3>
 
-menuIcon.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  const expanded = menuIcon.getAttribute("aria-expanded") === "true";
-  menuIcon.setAttribute("aria-expanded", String(!expanded));
-  menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
-});
-</script>
+    <div class="project-grid" id="competencies">
+      <section id="design">
+        <h2>Getting along with new people</h2>
+        <p>I get along well with people in my club by being friendly, open-minded, and respectful. I make an effort to listen, share ideas, and include everyone, which helps create a positive and cooperative environment. Below is me and VSA!</p>
+        <figure>
+          <img src="VSAGroup.png" alt="Picture of our group">
+          <figcaption>The whole VSA Group!</figcaption>
+        </figure>
+      </section>
 
+      <section id="leadership">
+        <h2>Leadership & Collaboration</h2>
+        <p>My leadership experience in DECA taught me the importance of teamwork and communication. 
+          I lead projects by encouraging creativity, problem-solving, and shared goals.</p>
+        <figure>
+          <img src="Mayor.png" alt="Team collaboration project">
+          <figcaption>Presenting our projects to the mayor!</figcaption>
+        </figure>
+      </section>
+
+      <section id="development">
+        <h2>Culinary Arts</h2>
+        <p>I was in culinary arts during my senior year and made many delicious dishes! I now cook more in culinary arts!</p>
+        <figure>
+          <img src="food.png" alt="Pic of food">
+          <figcaption>One of my culinary dishes</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Xinbiao Liu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const menuIcon = document.querySelector(".menu-icon");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuIcon.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+      menuIcon.setAttribute("aria-expanded", String(!expanded));
+      menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+    });
+
+    // Mobile dropdown toggle
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    dropdownToggle.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdownToggle.parentElement.classList.toggle("show");
+      }
+    });
+  </script>
 </body>
 </html>

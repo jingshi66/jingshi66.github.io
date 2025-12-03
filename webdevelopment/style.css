@@ -12,25 +12,12 @@
 ============================ */
 body {
   background-color: #15c4e7;
-  font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* ============================
    HEADER & LOGO
 ============================ */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 16px;
-  background-color: #333;
-  color: rgb(168, 104, 104);
-  box-sizing: border-box;
-  position: relative;
-  z-index: 10;
-}
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -43,11 +30,10 @@ header {
   max-height: 48px;
   object-fit: contain;
   border-radius: 6px;
-  display: block;
   -webkit-user-drag: none;
 }
 
-/* Slightly smaller logo on small screens */
+/* Smaller logo on mobile */
 @media (max-width: 600px) {
   .logo {
     width: 36px;
@@ -60,37 +46,39 @@ header {
 }
 
 /* ============================
-   NAVIGATION MENU
+   NAVIGATION (Projects-style)
 ============================ */
 nav {
   position: relative;
 }
 
-.nav-menu {
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
-.nav-menu li {
+.nav-links li {
   position: relative;
 }
 
-.nav-menu a {
+.nav-links a {
   text-decoration: none;
-  color: rgb(154, 63, 63);
+  color: white;
+  font-weight: bold;
   padding: 10px 15px;
-  display: block;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.nav-menu a:hover {
-  background-color: #555;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffda00;
 }
 
-/* Dropdown */
+/* Dropdown (desktop) */
 .dropdown {
   display: none;
   position: absolute;
@@ -98,8 +86,6 @@ nav {
   left: 0;
   background-color: #333;
   list-style: none;
-  padding: 0;
-  margin: 0;
   min-width: 150px;
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -107,62 +93,82 @@ nav {
 
 .dropdown li a {
   padding: 10px 15px;
-  color: rgb(168, 33, 33);
+  color: white;
 }
 
 .dropdown li a:hover {
   background-color: #555;
 }
 
-.nav-menu li:hover > .dropdown {
+.nav-links li:hover > .dropdown {
   display: block;
 }
 
-/* Hamburger styling */
-.hamburger {
-  display: none;
+/* ============================
+   HAMBURGER (Projects-style)
+============================ */
+.menu-icon {
   font-size: 28px;
-  color: white;
   cursor: pointer;
-  user-select: none;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
 }
 
-/* Responsive nav toggle */
-@media (max-width: 800px) {
-  .hamburger {
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+@media (max-width: 768px) {
+
+  .menu-icon {
     display: block;
   }
 
-  .nav-menu {
-    display: none;
+  .nav-links {
     flex-direction: column;
-    background-color: #333;
     position: absolute;
-    top: 60px;
+    top: 100%;
     right: 0;
+    background: #004aad;
     width: 220px;
-    padding: 10px 0;
+    max-height: 0;
+    overflow: hidden;
     border-radius: 0 0 10px 10px;
+    transition: max-height 0.3s ease-out;
+    padding-top: 10px;
   }
 
-  .nav-menu.active {
-    display: flex;
-    animation: slideDown 0.3s ease;
+  .nav-links.active {
+    max-height: 400px;
   }
 
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .nav-menu li {
-    text-align: center;
+  .nav-links li {
     width: 100%;
+    text-align: center;
   }
 
-  .nav-menu a {
-    padding: 12px;
+  .nav-links a {
+    border-bottom: 1px solid #003580;
     display: block;
+    padding: 12px;
+  }
+
+  /* Disable desktop dropdown */
+  .nav-links li:hover > .dropdown {
+    display: none;
+  }
+
+  /* Mobile dropdown reveal */
+  .nav-links li.show .dropdown {
+    display: block;
+    position: static;
+    background: #003580;
+    border-radius: 0;
+  }
+
+  .dropdown a {
+    padding-left: 25px;
   }
 }
 
@@ -209,7 +215,6 @@ nav {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3), 0 0 10px rgba(141, 3, 3, 0.8);
   transition: all 0.3s ease;
 }
@@ -240,16 +245,13 @@ nav {
 }
 
 .reflection-section p {
-  color: #1e1e1e;
-  font-size: 18px;
-  line-height: 1.7;
-  text-align: justify;
-  margin-bottom: 20px;
   background-color: rgba(96, 239, 218, 0.6);
+  color: #1e1e1e;
   padding: 15px 20px;
   border-radius: 10px;
   text-indent: 2em;
-  transition: background-color 0.3s ease;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .reflection-section p:first-letter {
@@ -257,7 +259,6 @@ nav {
   font-weight: bold;
   color: #21bbe1;
   float: left;
-  line-height: 1;
   padding-right: 5px;
 }
 
@@ -270,55 +271,47 @@ nav {
 ============================ */
 .contact-container {
   max-width: 700px;
-  margin: 40px auto;
-  padding: 18px;
-  background-color: #752828;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.contact-container h1 {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  color: #fff;
 }
 
-.contact-info {
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 6px 10px;
+  gap: 12px;
+  text-align: left;
 }
 
-.contact-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #8a3232;
-  text-decoration: none;
-  font-size: 0.95rem;
+.contact-form label {
+  font-weight: bold;
+  color: #333;
 }
 
-.contact-item i,
-.contact-item svg,
-.contact-item img.icon {
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  vertical-align: middle;
-  object-fit: contain;
-  opacity: 0.95;
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
 }
 
-@media (max-width: 480px) {
-  .contact-info {
-    align-items: center;
-  }
-  .contact-item {
-    justify-content: center;
-    white-space: normal;
-  }
+.contact-form button {
+  background-color: #1cc1f3;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0099cc;
+  transform: scale(1.05);
 }
 
 /* ============================
@@ -333,153 +326,87 @@ main {
   margin: 2rem auto;
   background: rgb(146, 212, 134);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 main > * {
   background: rgba(93, 60, 60, 0.8);
   padding: 1.2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 main h1 {
   grid-column: 1 / -1;
   text-align: center;
   border-bottom: 2px solid #92e711;
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
 }
 
-@media (max-width: 800px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-/* Make the table scrollable on smaller screens */
+/* ============================
+   TABLE
+============================ */
 .data-table {
   overflow-x: auto;
   margin: 1.5rem 0;
 }
 
-/* Hide caption visually but keep accessible for screen readers */
-.sr-only {
-  position: absolute;
-  left: -9999px;
-}
-
-/* Table base styling */
 table {
   width: 100%;
   border-collapse: collapse;
   border: 2px solid #444;
-  font-size: 1rem;
 }
 
-/* Header area */
 thead th {
   background-color: #333;
   color: white;
   padding: 0.75rem;
-  text-align: left;
 }
 
-/* Table cell style */
 td, th {
   padding: 0.75rem;
   border: 1px solid #666;
 }
 
-/* Color first and third rows in tbody */
 tbody tr:nth-child(1),
 tbody tr:nth-child(3) {
   background-color: #e8f2ff;
 }
 
-/* Alternate background colors for all data rows */
 tbody tr:nth-child(even) {
   background-color: #f7f7f7;
 }
 
-/* Figcaption styling */
-figcaption {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
-
-/* Responsive styling */
-@media (max-width: 600px) {
-  table {
-    font-size: 0.85rem;
-  }
-
-  td, th {
-    padding: 0.5rem;
-  }
-}
 /* ============================
-   FOOTER + ICON ANIMATION
+   RESUME BOX
 ============================ */
+.resume-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.resume-link {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  background-color: #004aad;
+  color: white;
+  border-radius: 6px;
+}
+
+.resume-link:hover {
+  background-color: #00367e;
+  transform: scale(1.03);
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer .contact-item img {
+  width: 18px;
+  height: 18px;
+}
+
 .site-footer {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 25px;
   text-align: center;
-  margin-top: 40px;
-}
-
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 15px;
-}
-
-.footer-icon {
-  color: #ffdb70;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s ease;
-}
-
-.footer-icon i {
-  font-size: 24px;
-  transition: transform 0.35s ease, color 0.35s ease, filter 0.35s ease;
-}
-
-.footer-icon:hover i {
-  transform: scale(1.25);
-  color: #ffffff;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-}
-
-.footer-icon:hover {
-  color: #ffffff;
-}
-/* Custom font from Google Fonts applied to site */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Custom font from Google Fonts applied to site */
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
-h1 {
-    font-family: "Nabla", cursive;
-}
-/* Custom styles for all <h2> elements */
-h2 {
-    font-family: "Nabla", cursive;   /* uses your custom Google font */
-    letter-spacing: 2px;             /* text effect #1 */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.25); /* text effect #2 */
-    font-size: 2.2rem;               /* optional: makes it stand out */
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
