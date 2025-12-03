@@ -174,3 +174,174 @@ footer {
     font-size: 0.9rem;
   }
 }
+/* ============================================
+   Name: Xinbiao Liu
+   Date: December 3, 2025
+   File: nav.css
+   Description: Fixed navigation and custom fonts for responsive portfolio.
+   ============================================ */
+
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== CUSTOM FONTS ====== */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nabla', cursive;
+}
+
+/* ====== HEADER ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+/* ====== NAVIGATION ====== */
+nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s;
+  padding: 4px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f0c330;
+}
+
+/* ====== DROPDOWN ====== */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  min-width: 160px;
+  border-radius: 4px;
+  padding: 5px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+/* Show dropdown on hover (desktop) */
+.nav-links li:hover > .dropdown {
+  display: block;
+}
+
+/* ====== HAMBURGER ICON ====== */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+  background: none;
+  border: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.menu-icon:hover {
+  color: #f0c330;
+}
+
+/* ====== RESPONSIVE MENU ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+    transition: max-height 0.4s ease-in;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+  }
+
+  /* Mobile dropdown toggle */
+  .nav-links li.show > .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #555;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown a {
+    border-bottom: 1px solid #666;
+  }
+}
