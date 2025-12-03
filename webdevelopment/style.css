@@ -410,3 +410,12 @@ footer .contact-item img {
   padding: 25px;
   text-align: center;
 }
+/* Body font */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, figcaption{
+  font-family: 'Nabla', cursive;text-shadow: #003580;
+}
