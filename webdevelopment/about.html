@@ -5,23 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | Xinbiao Liu</title>
 
-  <!--
-    Name: Xinbiao Liu
-    Date: December 2, 2025
-    Page: About
-    Description: About Me page with image and video showcasing personal interests.
-  -->
-     <!-- Custom font used here -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nabla&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css" />
+  <!-- Custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
-<div class="hamburger">&#9776;</div>
 
 <body>
 <header>
@@ -29,195 +20,188 @@
     <img src="logo.png" alt="Your Site Logo" class="logo">
   </div>
 
+  <!-- Hamburger button for mobile -->
+  <button class="menu-icon" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
   <nav>
-    <button class="menu-icon" onclick="toggleMenu()">☰</button>
-
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Home</a></li>
-
       <li>
-        <a href="about.html">About</a>
+        <a href="#" class="dropdown-toggle">About ▾</a>
         <ul class="dropdown">
-          <li><a href="drop.html">Test</a></li>
-          <li><a href="drop.html">Test</a></li>
-          <li><a href="drop.html">Test</a></li>
+          <li><a href="drop.html">Test 1</a></li>
+          <li><a href="drop.html">Test 2</a></li>
+          <li><a href="drop.html">Test 3</a></li>
         </ul>
       </li>
-
-      <li><a href="reflection.html" class="active">Reflection</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<main>
+  <h1>Xinbiao's Portfolio</h1>
+
+  <!-- 🧍 About Section -->
+  <section class="about-section">
+    <h2>About Me</h2>
+    <p>I am <strong>Xinbiao Liu</strong>, a freshman at the University of Missouri! Here are some facts about me:</p>
+
+    <figure class="about-image">
+      <img src="xinbiaopic.jpg" alt="Xinbiao Liu on campus" class="profile-pic">
+      <figcaption>This is me at a Halloween event for my club on Mizzou's Campus.</figcaption>
+    </figure>
+
+    <ul class="fact-list">
+      <li>My parents own a Chinese buffet restaurant back home.</li>
+      <li>I have a younger brother who’s into football.</li>
+    </ul>
+  </section>
+
+  <!-- 🎮 Hobbies Section -->
+  <section class="hobbies">
+    <h3>My Hobbies</h3>
+    <ul class="hobby-list">
+      <li>Watching TV
+        <ul>
+          <li>Demon Slayer</li>
+          <li>Phineas and Ferb</li>
+          <li>Squid Game</li>
+          <li>SpongeBob SquarePants</li>
+        </ul>
+      </li>
+      <li>Reading Books
+        <ul>
+          <li>Junji Ito</li>
+          <li>Demon Slayer</li>
+          <li>Plants vs. Zombies Comics</li>
+        </ul>
+      </li>
+      <li>Swimming</li>
+      <li>Designing
+        <ul>
+          <li>Pictures</li>
+          <li>Projects</li>
+          <li>Videos</li>
+        </ul>
+      </li>
+      <li>Playing Games
+        <ul>
+          <li>Roblox</li>
+          <li>Touhou</li>
+          <li>Plants vs. Zombies (PVZ)</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 🎓 Certifications Section -->
+  <section class="certifications">
+    <h3>Certifications and Degree</h3>
+    <ul class="certified-list">
+      <li><strong>DECA</strong> and <strong>Robotics (FTC)</strong> participant throughout high school.</li>
+      <li><strong>Certified in Culinary Arts</strong> — learned to cook dishes from scratch.</li>
+      <li><strong>High School Graduate</strong>, Class of 2025.</li>
+      <li><strong>Majoring in Educational Studies</strong> (Educational Games & Simulation Design) and <strong>International Business</strong> at the University of Missouri.</li>
+    </ul>
+  </section>
+
+  <!-- 🎥 Video Section -->
+  <section class="video-section">
+    <figure class="about-video">
+      <video controls width="400">
+        <source src="Xinbiaovid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>My short introduction video about me!</figcaption>
+    </figure>
+  </section>
+
+  <!-- 📄 Resume Link -->
+  <div class="resume-wrapper">
+    <a href="resume.pdf" class="resume-link" target="_blank">Download My Resume</a>
+  </div>
+
+  <figure class="data-table">
+    <figcaption>Weekly Study Schedule</figcaption>
+    <table>
+      <caption class="sr-only">Weekly Study Schedule Table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Study Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Monday</th>
+          <td>Web Development</td>
+          <td>2 hours</td>
+        </tr>
+        <tr>
+          <th scope="row">Tuesday</th>
+          <td>International Relations</td>
+          <td>2 hours</td>
+        </tr>
+        <tr>
+          <th scope="row">Wednesday</th>
+          <td>Cultural Anthropology</td>
+          <td>5 hours</td>
+        </tr>
+        <tr>
+          <th scope="row">Thursday</th>
+          <td>Intro to Peace Studies</td>
+          <td>1 hour</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Total</th>
+          <td colspan="2">7.5 hours</td>
+        </tr>
+      </tfoot>
+    </table>
+  </figure>
+</main>
+
+<footer>
+  <div class="contact-info">
+    <div class="contact-item">
+      <img src="phone.png" class="icon" alt="Phone Icon">
+      <span>(669) 678-9999</span>
+    </div>
+    <div class="contact-item">
+      <img src="email.png" class="icon" alt="Email Icon">
+      <span>Xinbiao@yahoo.com</span>
+    </div>
+  </div>
+  <p>&copy; 2025 Xinbiao Liu — Last updated October 6, 2025</p>
+</footer>
+
+<!-- Navigation JS -->
 <script>
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
+const menuIcon = document.querySelector(".menu-icon");
+const navMenu = document.getElementById("nav-menu");
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+// Hamburger toggle
+menuIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+  menuIcon.setAttribute("aria-expanded", String(!expanded));
+  menuIcon.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+});
+
+// Mobile dropdown toggle
+dropdownToggle.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    e.preventDefault();
+    dropdownToggle.parentElement.classList.toggle("show");
   }
-</script>
-
-  <main>
-    <h1>Xinbiao's Portfolio</h1>
-
-    <!-- 🧍 About Section -->
-    <section class="about-section">
-      <h2>About Me</h2>
-      <p>
-        I am <strong>Xinbiao Liu</strong>, a freshman at the University of Missouri! Here are some facts about me:
-      </p>
-
-      <figure class="about-image">
-        <img src="xinbiaopic.jpg" alt="Xinbiao Liu on campus" class="profile-pic">
-        <figcaption>This is me at a Halloween event for my club on Mizzou's Campus.</figcaption>
-      </figure>
-
-      <ul class="fact-list">
-        <li>My parents own a Chinese buffet restaurant back home.</li>
-        <li>I have a younger brother who’s into football.</li>
-      </ul>
-    </section>
-
-    <!-- 🎮 Hobbies Section -->
-    <section class="hobbies">
-      <h3>My Hobbies</h3>
-      <ul class="hobby-list">
-        <li>Watching TV
-          <ul>
-            <li>Demon Slayer</li>
-            <li>Phineas and Ferb</li>
-            <li>Squid Game</li>
-            <li>SpongeBob SquarePants</li>
-          </ul>
-        </li>
-        <li>Reading Books
-          <ul>
-            <li>Junji Ito</li>
-            <li>Demon Slayer</li>
-            <li>Plants vs. Zombies Comics</li>
-          </ul>
-        </li>
-        <li>Swimming</li>
-        <li>Designing
-          <ul>
-            <li>Pictures</li>
-            <li>Projects</li>
-            <li>Videos</li>
-          </ul>
-        </li>
-        <li>Playing Games
-          <ul>
-            <li>Roblox</li>
-            <li>Touhou</li>
-            <li>Plants vs. Zombies (PVZ)</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 🎓 Certifications Section -->
-    <section class="certifications">
-      <h3>Certifications and Degree</h3>
-      <ul class="certified-list">
-        <li><strong>DECA</strong> and <strong>Robotics (FTC)</strong> participant throughout high school.</li>
-        <li><strong>Certified in Culinary Arts</strong> — learned to cook dishes from scratch.</li>
-        <li><strong>High School Graduate</strong>, Class of 2025.</li>
-        <li>
-          <strong>Majoring in Educational Studies</strong> (Educational Games & Simulation Design)
-          and <strong>International Business</strong> at the University of Missouri.
-        </li>
-      </ul>
-    </section>
-
-    <!-- 🎥 Video Section -->
-    <section class="video-section">
-      <figure class="about-video">
-        <video controls width="400">
-          <source src="Xinbiaovid.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <figcaption>My short introduction video about me!</figcaption>
-      </figure>
-    </section>
-
-    <!-- 📄 Resume Link -->
-    <div class="resume-wrapper">
-      <a href="resume.pdf" class="resume-link" target="_blank">Download My Resume</a>
-    </div>
-
-    <figure class="data-table">
-  <figcaption>Weekly Study Schedule</figcaption>
-
-  <table>
-    <caption class="sr-only">Weekly Study Schedule Table</caption>
-
-    <thead>
-      <tr>
-        <th scope="col">Day</th>
-        <th scope="col">Subject</th>
-        <th scope="col">Study Time</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <th scope="row">Monday</th>
-        <td>Web Development</td>
-        <td>2 hours</td>
-      </tr>
-
-      <tr>
-        <th scope="row">Tuesday</th>
-        <td>International Relations</td>
-        <td>2 hours</td>
-      </tr>
-
-      <tr>
-        <th scope="row">Wednesday</th>
-        <td>Cultural Anthropology</td>
-        <td>5 hours</td>
-      </tr>
-
-      <tr>
-        <th scope="row">Thursday</th>
-        <td>Intro to Peace Studies</td>
-        <td>1 hour</td>
-      </tr>
-    </tbody>
-
-    <tfoot>
-      <tr>
-        <th scope="row">Total</th>
-        <td colspan="2">7.5 hours</td>
-      </tr>
-    </tfoot>
-  </table>
-</figure>
-
-  </main>
-
-  <footer>
-    <div class="contact-info">
-      <div class="contact-item">
-        <img src="phone.png" class="icon" alt="Phone Icon">
-        <span>(669) 678-9999</span>
-      </div>
-      <div class="contact-item">
-        <img src="email.png" class="icon" alt="Email Icon">
-        <span>Xinbiao@yahoo.com</span>
-      </div>
-    </div>
-    <p>&copy; 2025 Xinbiao Liu — Last updated October 6, 2025</p>
-  </footer>
-  <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  
+});
 </script>
 
 </body>
