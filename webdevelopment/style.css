@@ -419,3 +419,11 @@ body {
 h1, h2, h3, figcaption{
   font-family: 'Nabla', cursive;text-shadow: #003580;
 }
+
+.profile-pic {
+  width: 100%;
+  max-width: 300px; /* optional: keeps picture from getting too wide on desktop */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
