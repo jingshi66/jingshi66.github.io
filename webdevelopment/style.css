@@ -427,3 +427,27 @@ h1, h2, h3, figcaption{
   border-radius: 8px;
   display: block;
 }
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #222;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icon i {
+  font-size: 32px;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.icon:hover i {
+  transform: scale(1.2);
+  color: #4ec6ff;
+  box-shadow: 0 0 12px #4ec6ff;
+}
